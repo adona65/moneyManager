@@ -9,5 +9,11 @@ http://localhost:7810/ # Actual URL of the application.
 
 ng build --watch # Allow continuous building of the angular part of the application (to be play in angular's root folder).
 
+mvn spring-boot:run # Allow to run the application via prompt. 
+
+# To package and run the application as a standalone JAR :
+mvn package
+java -jar target/*.jar
+
 -----------------------------------------------------------------------------------------------------------------------
 Copyright : You are allow to use and modify freely the code from this project in your own applications for NON commercial uses only. I you do so, add a link to this repository.
