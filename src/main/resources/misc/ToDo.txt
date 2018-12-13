@@ -1,0 +1,5 @@
+# File storing all things to do about this project and related technical informations :
+
+- See what btoa() function does (in app.service.ts file).
+- Perhaps rename "app.service" for more comprehensible name.
+- Look for what is exact point of angular's "spec.ts" files.

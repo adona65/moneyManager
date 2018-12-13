@@ -1,0 +1,34 @@
+# This file will be used to store usefull informations and notes about some technical purposes.
+
+-----------------------------------------------------------------------------------------------------------------------
+# Useful commands and notes for development purposes : 
+
+http://localhost:7810/ # Actual URL of the application if launched in local (see application.properties file for knowing the port number).
+
+ng build --watch # Allow continuous building of the angular part of the application (to be play in angular's root folder).
+
+mvn spring-boot:run # Allow to run the application via prompt. 
+
+# To package and run the application as a standalone JAR :
+mvn package
+java -jar target/*.jar
+
+-----------------------------------------------------------------------------------------------------------------------
+# Some technical notes about general development concepts :
+
+CSRF = cross-site request forgery
+
+-----------------------------------------------------------------------------------------------------------------------
+# Some technical notes about Angular :
+
+In the next example, pipe(finalize()) callback allow to do the will actions unconditionally.
+
+import { finalize } from 'rxjs/operators';
+
+this.http.post('logout', {}).pipe(
+  finalize(() => {
+    this.app.authenticated = false;
+    this.router.navigateByUrl('/login');
+  })
+).subscribe();
+
